@@ -1,7 +1,9 @@
 # BBR
 Enable\Disable BBR Oracle Free Tier  Ubuntu 24.04.2 LTS
 
-```sudo bash -c "$(curl -L https://raw.githubusercontent.com/avertv/BBR/main/bbr_control.sh)"```
+```
+sudo bash -c "$(curl -L https://raw.githubusercontent.com/avertv/BBR/main/bbr_control.sh)"
+```
 
 Скопируйте код выше в файл, например, bbr_control.sh. Сделайте файл исполняемым
 
