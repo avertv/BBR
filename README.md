@@ -7,11 +7,15 @@ sudo bash -c "$(curl -L https://raw.githubusercontent.com/avertv/BBR/main/bbr_co
 
 Скопируйте код выше в файл, например, bbr_control.sh. Сделайте файл исполняемым
 
+```
 chmod +x bbr_control.sh
+```
 
 Выполните скрипт с правами root
 
+```
 sudo ./bbr_control.sh
+```
 
 Что делает скрипт:
 
@@ -19,7 +23,9 @@ sudo ./bbr_control.sh
 
 Проверка результата: После выполнения скрипта он покажет текущий статус BBR и параметры. Вы можете дополнительно проверить статус командой:
 
+```
 sysctl net.core.default_qdisc net.ipv4.tcp_congestion_control
+```
 
 Примечания: Скрипт проверяет наличие необходимых модулей ядра (CONFIG_TCP_CONG_BBR и CONFIG_NET_SCH_FQ). В Ubuntu 24.04.2 LTS они обычно включены. Для отключения BBR используется стандартный алгоритм cubic и qdisc fq_codel, которые применяются по умолчанию в Ubuntu. Скрипт безопасно редактирует /etc/sysctl.conf, добавляя или удаляя только необходимые строки.
 
